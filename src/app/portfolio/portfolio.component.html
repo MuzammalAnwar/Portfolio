@@ -1,10 +1,21 @@
 <section id="prj">
+    <img class="about-glow" src="../../assets/img/portfolio/Purple-shadow-portfolio.svg" alt="glow" />
+    <section class="portfolio-header">
+    <div class="section-title">
+        <span class="line-left"></span>
+        <h2>Portfolio</h2>
+        <span class="line-right"></span>
+    </div>
+    <p class="subtitle">
+        {{'PORTFOLIO.SUBTITLE' | translate}}
+    </p>
+    </section>
     <app-singlework
     *ngFor="let project of projects"
     [title]="project.title"
     [image]="project.image"
     [technologies]="project.technologies"
-    [description]="project.description"
+    [description]="project.descriptionTranslateKey | translate"
     [liveLink]="project.liveLink"
     [githubLink]="project.githubLink"
     ></app-singlework>

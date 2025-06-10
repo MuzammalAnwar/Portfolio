@@ -5,13 +5,15 @@
             <img class="profile-img" src="../../assets/img/hero/dummy-profile-img.png" alt="">
             <div class="hero-content">
                 <div class="text-box">
-                    <span class="vertical-text">I am</span>
+                    <span [ngClass]="SetFontSize()" class="vertical-text">{{'HERO.GREETING'
+                        | translate}}</span>
                     <div class="horizontal-text">
                         <h1>Muzammal Anwar</h1>
                         <h2 class="job-title">FULLSTACK DEVELOPER</h2>
                     </div>
                 </div>
-                <button (click)="scrollService.scrollToId('form')" class="cta-button">Let’s talk!</button>
+                <button (click)="scrollService.scrollToId('form')" class="cta-button">{{'HERO.BUTTON' |
+                    translate}}</button>
             </div>
         </div>
         <div class="hero-bottom-links">
@@ -30,7 +32,7 @@
                     muzammalanwar556&#64;gmail.com
                 </a>
             </div>
-            <div class="scroll-down-text">
+            <div class="scroll-down-text" (click)="scrollService.scrollToId('abtme')">
                 <span class="scroll-letter" style="--i: 0">S</span>
                 <span class="scroll-letter" style="--i: 1">c</span>
                 <span class="scroll-letter" style="--i: 2">r</span>
@@ -45,5 +47,6 @@
                 <img class="scroll-arrow" src="../../assets/icons/hero/arrow-down-line.png" alt="">
             </div>
         </div>
+        <img class="hero-bg-img" src="../../assets/img/hero/Hero-Background.svg" alt="Background" />
     </section>
 </div>

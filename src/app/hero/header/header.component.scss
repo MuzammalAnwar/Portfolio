@@ -6,7 +6,6 @@ header {
     align-items: center;
     height: 36px;
     color: $color-click;
-    gap: 590px;
     padding: 37px 100px;
 }
 
@@ -37,10 +36,9 @@ nav {
     border-color: $color-primary;
     font-size: 0.875rem;
     font-weight: 500;
-    border: 1px solid transparent;
+    border: 1px solid $color-primary;
     background-color: transparent;
     color: $color-click;
-    cursor: pointer;
     transition: all 0.125s ease-in-out;
     font-weight: 400;
     font-size: 18px;
@@ -48,24 +46,19 @@ nav {
     letter-spacing: 0%;
     width: 38;
     height: 32;
-    // top: 20px;
-    // left: 20px;
     border-width: 1px;
     gap: 5px;
 
-    // === Hover State ===
     &:hover {
         background-color: $color-primary;
         color: white;
     }
 
-    // === Pressed (active click animation) ===
     &:active {
         background-color: $color-click;
         color: black;
     }
 
-    // === Active Selected ===
     &.active {
         background-color: $color-secondary;
         border-color: $color-secondary;

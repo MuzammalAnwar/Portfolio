@@ -1,31 +1,33 @@
 <section>
-  <div class="contact-promo">
-    <h2>Got a problem to solve?</h2>
-    <p>
-      Encourage people to contact you and describe what role you are interested in. Show that you will add value to
-      their projects through your work.
-    </p>
-    <p>
-      Need a Frontend developer? <strong>Contact me!</strong>
-    </p>
-  </div>
-  <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" id="form">
-    <input type="text" name="user_name" ngModel placeholder="Your name" required />
-    <input type="email" name="user_email" ngModel placeholder="Your email" required
-      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
-    <textarea name="message" rows="5" ngModel placeholder="Your message" required></textarea>
-    <label class="consent">
-      <input type="checkbox" name="consent" ngModel required />
-      <span>
-        I've read the <a href="/privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my
-        data
-        as outlined.
-      </span>
-    </label>
-    <button type="submit" [disabled]="!contactForm.valid" class="cta-button">Send message :)</button>
-  </form>
+  <img class="about-glow" src="../../assets/img/footer/Purple-shadow-Footer.svg" alt="glow" />
+  <section class="contact-header">
+    <div class="section-title">
+      <span class="line-left"></span>
+      <h2>{{ 'CONTACT.SECTION_HEADER' | translate }}</h2>
+    </div>
+  </section>
+  <section class="contact-content">
+    <div class="contact-promo">
+      <h2>{{'CONTACT.TITLE' | translate}}</h2>
+      <p>{{'CONTACT.TEXT' | translate}}</p>
+      <p [innerHTML]="'CONTACT.INVITE' | translate"></p>
+    </div>
+    <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" id="form">
+      <input type="text" name="user_name" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.NAME' | translate}}" required />
+      <input type="email" name="user_email" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.EMAIL' | translate}}" required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+      <textarea name="message" rows="5" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.MESSAGE' | translate}}"
+        required></textarea>
+      <label class="consent">
+        <input type="checkbox" name="consent" ngModel required />
+        <span [innerHTML]="'CONTACT.CHECKBOX' | translate"></span>
+      </label>
+      <button type="submit" [disabled]="!contactForm.valid" class="cta-button">{{'CONTACT.SEND_BUTTON' |
+        translate}}</button>
+    </form>
 
-  <div *ngIf="isSent" class="confirmation-animation">
-    {{confirmationMessage}}
-  </div>
+    <div *ngIf="isSent" class="confirmation-animation">
+      {{confirmationMessage}}
+    </div>
+  </section>
 </section>

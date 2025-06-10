@@ -2,33 +2,17 @@ export const PROJECTS = [
   {
     image: '../../assets/img/hero/dummy-profile-img.png',
     title: 'Join',
-    technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-    description: 'Task manager inspired by the Kanban System...',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    descriptionTranslateKey: "PORTFOLIO.PROJECTS.DESCRIPTION_JOIN",
     liveLink: 'https://your-live-url.com',
-    githubLink: 'https://github.com/your-repo'
+    githubLink: 'https://github.com/MuzammalAnwar/Join.git'
   },
   {
     image: '../../assets/img/hero/dummy-profile-img.png',
-    title: 'Join',
-    technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-    description: 'Task manager inspired by the Kanban System...',
+    title: "Golem's Ember",
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    descriptionTranslateKey: "PORTFOLIO.PROJECTS.DESCRIPTION_2D_GAME",
     liveLink: 'https://your-live-url.com',
-    githubLink: 'https://github.com/your-repo'
+    githubLink: 'https://github.com/MuzammalAnwar/2D_Game.git'
   },
-  {
-    image: '../../assets/img/hero/dummy-profile-img.png',
-    title: 'Join',
-    technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-    description: 'Task manager inspired by the Kanban System...',
-    liveLink: 'https://your-live-url.com',
-    githubLink: 'https://github.com/your-repo'
-  },
-  {
-    image: '../../assets/img/hero/dummy-profile-img.png',
-    title: 'Join',
-    technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-    description: 'Task manager inspired by the Kanban System...',
-    liveLink: 'https://your-live-url.com',
-    githubLink: 'https://github.com/your-repo'
-  }
 ];

@@ -4,6 +4,14 @@
     height: 100vh;
 }
 
+::ng-deep .text-default {
+    font-size: 64px;
+}
+
+::ng-deep .text-german {
+    font-size: 42px !important;
+}
+
 .profile-img {
     width: auto;
     height: auto;
@@ -11,6 +19,17 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+}
+
+.hero-bg-img {
+    position: absolute;
+    right: 0;
+    bottom: 29rem;
+    transform: translateY(86%);
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 section {
@@ -45,7 +64,6 @@ section {
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         font-weight: 400;
-        font-size: 64px;
         line-height: 120%;
         letter-spacing: 0%;
     }
@@ -83,7 +101,7 @@ section {
         font-size: 23px;
         line-height: 120%;
         letter-spacing: 0%;
-        width: 165px;
+        width: auto;
         height: 58px;
         border-radius: 10px;
         border: none;
@@ -102,17 +120,11 @@ section {
         }
     }
 
-
-
     .hero-bottom-links {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         padding: 6px 0px 12px 0px;
-        // margin-right: 8%;
-        // width: 566px;
-        // height: 40px;
-
         width: 100%;
 
         .left-side {
@@ -134,8 +146,6 @@ section {
             background-color: $color-primary;
             border-radius: 2px;
             margin-top: 4px;
-
-            // Glow and color change
             animation: purpleLinePulse 2.5s ease-in-out infinite alternate;
             box-shadow: 0 0 12px 2px $color-primary;
             transition: box-shadow 0.4s ease-in-out;
@@ -192,6 +202,7 @@ section {
         height: 200px;
         gap: 2px;
         margin-right: 5%;
+        cursor: pointer;
 
         .scroll-letter {
             color: white;

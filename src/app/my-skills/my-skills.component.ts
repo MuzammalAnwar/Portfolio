@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ScrollService } from '../shared/scroll.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Skill {
   name: string;
@@ -33,7 +34,7 @@ const skills: Skill[] = [
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })

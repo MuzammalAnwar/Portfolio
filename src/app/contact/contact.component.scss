@@ -1,11 +1,32 @@
 @use '../styles.scss' as *;
 
+:host {
+    display: block;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.about-glow {
+    position: absolute;
+    bottom: -26rem;
+    left: -23rem;
+    z-index: -1;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+}
+
 section {
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin: 30px 80px;
+    width: 100%;
+    margin: 30px 0px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
 }
 
 form {
@@ -19,7 +40,7 @@ form {
 
     input::placeholder,
     textarea::placeholder {
-        color: rgba($color-click, 1); // or any custom color
+        color: rgba($color-click, 1);
         font-style: italic;
         transition: color 0.3s ease;
         font-weight: 400;
@@ -46,19 +67,18 @@ form {
         padding-left: 25px;
         width: 100%;
 
-        // Animate border color only
         animation: pulseBorderColor 2.5s ease-in-out infinite alternate;
         transition: border-color 0.3s ease;
 
         &:focus {
             border-color: $color-secondary;
             box-shadow: 0 0 12px 2px $color-primary;
-            background: rgba(255, 255, 255, 0.02); // subtle contrast
+            background: rgba(255, 255, 255, 0.02);
         }
 
         &:hover {
             border-color: lighten($color-primary, 10%);
-            background: rgba(255, 255, 255, 0.02); // subtle contrast
+            background: rgba(255, 255, 255, 0.02);
             box-shadow: 0 0 6px 1px rgba($color-primary, 0.3);
             box-shadow: 0 0 12px 2px $color-primary;
             transition: all 0.3s ease-in-out;
@@ -81,19 +101,18 @@ form {
         height: 100px;
         max-height: 200px;
 
-        // Animate border color only
         animation: pulseBorderColor 2.5s ease-in-out infinite alternate;
         transition: border-color 0.3s ease;
 
         &:focus {
             border-color: $color-secondary;
             box-shadow: 0 0 12px 2px $color-primary;
-            background: rgba(255, 255, 255, 0.02); // subtle contrast
+            background: rgba(255, 255, 255, 0.02);
         }
 
         &:hover {
             border-color: lighten($color-primary, 10%);
-            background: rgba(255, 255, 255, 0.02); // subtle contrast
+            background: rgba(255, 255, 255, 0.02);
             box-shadow: 0 0 6px 1px rgba($color-primary, 0.3);
             transition: all 0.3s ease-in-out;
             box-shadow: 0 0 12px 2px $color-primary;
@@ -115,11 +134,22 @@ form {
             cursor: pointer;
         }
 
-        a {
+        span a {
             color: $color-primary;
             text-decoration: underline;
         }
     }
+
+    ::ng-deep .consent a {
+        color: $color-primary;
+        text-decoration: underline;
+        font-weight: 500;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
 
     .cta-button {
         border: none;
@@ -131,7 +161,7 @@ form {
         line-height: 120%;
         letter-spacing: 0%;
         transition: background 0.3s;
-        width: 253px;
+        width: auto;
         height: 58px;
         border-radius: 10px;
         gap: 10px;
@@ -229,5 +259,41 @@ form {
 
     100% {
         border-color: $color-secondary;
+    }
+}
+
+span a {
+    color: $color-primary;
+    text-decoration: underline;
+}
+
+.contact-header {
+    margin-bottom: 3rem;
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1.5rem;
+
+        h2 {
+            color: $color-click;
+            font-size: 90px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 120%;
+            letter-spacing: 0%;
+        }
+
+        .line-left {
+            flex: 1;
+            max-width: 38%;
+            height: 4px;
+            background-color: $color-primary;
+            border-radius: 2px;
+            box-shadow: 0 0 12px 2px $color-primary;
+            animation: pulseThemeGlow 2.5s ease-in-out infinite alternate;
+            transition: box-shadow 0.4s ease-in-out;
+        }
     }
 }

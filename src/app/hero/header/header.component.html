@@ -2,13 +2,17 @@
     <div class="logo">Muzammal</div>
     <div class="header-links">
         <nav class="nav">
-            <a (click)="scrollService.scrollToId('abtme')" class="text-hover border-hover">About me</a>
+            <a (click)="scrollService.scrollToId('abtme')" class="text-hover border-hover">
+                {{'HEADER.ABOUT_ME' | translate}}
+            </a>
             <a (click)="scrollService.scrollToId('skillz')" class="text-hover border-hover">Skills</a>
-            <a (click)="scrollService.scrollToId('prj')" class="text-hover border-hover" >Portfolio</a>
+            <a (click)="scrollService.scrollToId('prj')" class="text-hover border-hover">Portfolio</a>
         </nav>
         <div class="lang-switcher">
-            <button class="lang-btn">DE</button>
-            <button class="lang-btn active">EN</button>
+            <button class="lang-btn" (click)="switchLang('de')"
+                [class.active]="translate.currentLang === 'de'">DE</button>
+            <button class="lang-btn" (click)="switchLang('en')"
+                [class.active]="translate.currentLang === 'en'">EN</button>
         </div>
     </div>
 </header>
