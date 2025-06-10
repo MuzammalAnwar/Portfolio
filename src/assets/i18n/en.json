@@ -1,0 +1,47 @@
+{
+  "HEADER": {
+    "ABOUT_ME": "About Me"
+  },
+  "HERO": {
+    "GREETING": "I am",
+    "SCROLLING": "Scroll Down",
+    "BUTTON": "Let's talk!"
+  },
+  "ABOUT_ME": {
+    "TITLE": "About Me",
+    "INTRO_PARAGRAPH": "I'm a passionate software developer with a strong interest in AI-driven solutions, particularly in the intersection of healthcare and technology. My journey into coding began with a curiosity for how software can solve real-world problems—and it quickly turned into a full-fledged mission to build meaningful, user-focused applications. I'm constantly learning, experimenting, and challenging myself to write cleaner, more efficient code.",
+    "LOCATION": "Based in Austria, I’m open to remote work, hybrid models, or relocating for exciting opportunities where I can grow both technically and personally.",
+    "OPEN_MINDEDNESS": "I enjoy exploring new technologies and frameworks. Whether it's a new JavaScript library, a backend optimization trick, or an AI model, I embrace opportunities to learn and evolve.",
+    "PROBLEM_SOLVING": "My approach to problem-solving is both analytical and creative. I enjoy breaking complex issues into manageable parts and always aim for solutions that are both effective and elegant."
+  },
+  "MY_SKILLS": {
+    "TITLE": "My Skills",
+    "INTRO": "I've built projects using a range of front-end and back-end technologies — from clean, responsive UIs in Angular to AI-powered data processing with Python.",
+    "LOOKING": "Looking for <span class='emphasis'>another skill</span>?",
+    "FLEX": "I’m constantly expanding my tech stack and always eager to grow and adapt.",
+    "BUTTON": "Get in touch"
+  },
+  "PORTFOLIO": {
+    "SUBTITLE": "Explore a selection of my work here - interact with projects to see my skills in action",
+    "PROJECTS": {
+      "DESCRIPTION_JOIN": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "DESCRIPTION_2D_GAME": "A simple Jump-and-run game based on an object-oriented approach. Help Brimstone the Golem find scattered mana stars and defeat Molgrath, the flame Endboss"
+    }
+  },
+  "CONTACT": {
+    "SECTION_HEADER": "Contact",
+    "TITLE": "Got a problem to solve?",
+    "TEXT": "If you're looking for someone who can bring value to your project through clean code and smart design, let's talk. I'm particularly interested in roles where I can contribute to frontend development and AI-driven applications.",
+    "INVITE": "Need a fullstack developer? <strong>Contact me!</strong>",
+    "PLACEHOLDERS": {
+      "NAME": "Your name",
+      "EMAIL": "Your email",
+      "MESSAGE": "Your message"
+    },
+    "CHECKBOX": "I've read the <a href='/privacy-policy' target='_blank'>privacy policy</a> and agree to the processing of my data as outlined.",
+    "SEND_BUTTON": "Send message :)"
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Legal Notice"
+  }
+}

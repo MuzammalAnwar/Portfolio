@@ -1,0 +1,47 @@
+{
+    "HEADER": {
+        "ABOUT_ME": "Über mich"
+    },
+    "HERO": {
+        "GREETING": "Ich bin",
+        "SCROLLING": "Runterscrollen",
+        "BUTTON": "Lass uns reden!"
+    },
+    "ABOUT_ME": {
+        "TITLE": "Über mich",
+        "INTRO_PARAGRAPH": "Ich bin ein leidenschaftlicher Softwareentwickler mit starkem Interesse an KI-gestützten Lösungen, insbesondere im Zusammenspiel von Gesundheitswesen und Technologie. Mein Weg in die Programmierung begann mit der Neugier, wie Software reale Probleme lösen kann – und entwickelte sich schnell zu einer Mission, bedeutungsvolle, benutzerorientierte Anwendungen zu schaffen. Ich lerne ständig dazu, experimentiere und fordere mich selbst heraus, um saubereren und effizienteren Code zu schreiben.",
+        "LOCATION": "Ich lebe in Österreich und bin offen für Remote-Arbeit, hybride Modelle oder einen Umzug für spannende Möglichkeiten, bei denen ich mich sowohl fachlich als auch persönlich weiterentwickeln kann.",
+        "OPEN_MINDEDNESS": "Ich erkunde gerne neue Technologien und Frameworks. Ob neue JavaScript-Bibliotheken, Backend-Optimierungen oder KI-Modelle – ich nutze jede Gelegenheit, um mich weiterzuentwickeln.",
+        "PROBLEM_SOLVING": "Meine Herangehensweise an Probleme ist analytisch und kreativ zugleich. Ich zerlege komplexe Aufgaben in überschaubare Teile und strebe stets nach Lösungen, die sowohl effektiv als auch elegant sind."
+    },
+    "MY_SKILLS": {
+        "TITLE": "Meine Skills",
+        "INTRO": "Ich habe Projekte mit einer Vielzahl von Frontend- und Backend-Technologien umgesetzt – von sauberen, responsiven Benutzeroberflächen in Angular bis hin zu KI-gestützter Datenverarbeitung mit Python.",
+        "LOOKING": "Fehlt ein <span class='emphasis'>Skill</span>?",
+        "FLEX": "Ich erweitere ständig meinen Tech-Stack und bin immer neugierig darauf, Neues zu lernen.",
+        "BUTTON": "Kontakt aufnehmen"
+    },
+    "PORTFOLIO": {
+        "SUBTITLE": "Hier findest du eine Auswahl meiner Projekte – klick dich durch, um meine Skills in Aktion zu erleben.",
+        "PROJECTS": {
+            "DESCRIPTION_JOIN": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.",
+            "DESCRIPTION_2D_GAME": "Ein einfaches Jump’n’Run-Spiel auf objektorientierter Basis. Hilf Brimstone dem Golem, verstreute Mana-Sterne zu sammeln und den Flammen-Endboss Molgrath zu besiegen."
+        }
+    },
+    "CONTACT": {
+        "SECTION_HEADER": "Kontakt",
+        "TITLE": "Ein Problem zu lösen?",
+        "TEXT": "Wenn du jemanden suchst, der deinem Projekt mit sauberem Code und durchdachtem Design echten Mehrwert bringt, dann lass uns reden. Besonders interessiert bin ich an Rollen im Bereich Frontend-Entwicklung und KI-gestützten Anwendungen.",
+        "INVITE": "Du brauchst einen Fullstack-Entwickler? <strong>Kontaktiere mich!</strong>",
+        "PLACEHOLDERS": {
+            "NAME": "Dein Name",
+            "EMAIL": "Deine E-Mail",
+            "MESSAGE": "Deine Nachricht"
+        },
+        "CHECKBOX": "Ich habe die <a href='/privacy-policy' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
+        "SEND_BUTTON": "Nachricht senden :)"
+    },
+    "FOOTER": {
+        "LEGAL_NOTICE": "Impressum"
+    }
+}
