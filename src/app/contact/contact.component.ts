@@ -1,0 +1,33 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import emailjs from 'emailjs-com';
+
+@Component({
+  selector: 'app-contact',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss'
+})
+export class ContactComponent {
+  isSent: boolean = false;
+  confirmationMessage: string = ''
+
+  sendEmail(form: NgForm) {
+    emailjs.sendForm(
+      'service_wuic8ya',
+      'template_0edbe79',
+      document.querySelector('form') as HTMLFormElement,
+      'dJjCWBpL_fIs-H6TB'
+    ).then(() => {
+      this.confirmationMessage = 'Your message was sent!'
+      this.isSent = true;
+      form.resetForm();
+      setTimeout(() => {this.isSent = false;}, 3000);
+    }, () => {
+      this.isSent = true;
+      this.confirmationMessage = 'An error occurred, please try again!'
+    });
+  }
+}

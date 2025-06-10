@@ -1,0 +1,155 @@
+@use '../styles.scss' as *;
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h2 {
+    margin-block-start: 0em;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    height: fit-content;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 88px;
+    height: 101px;
+    padding-top: 12px;
+
+
+    img {
+        width: 54px;
+        height: 60px;
+    }
+
+    p {
+        color: $color-click;
+        font-family: Poppins;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    padding: 0px 100px 60px 20px;
+    max-width: 700px;
+    width: fit-content;
+    // margin: 0 auto;
+    border-radius: 12px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 54px;
+        right: 0;
+        height: 4px;
+        width: 80px;
+        background-color: $color-primary;
+        border-radius: 2px;
+        box-shadow: 0 0 12px 2px $color-primary;
+        animation: pulseThemeGlow 2.5s ease-in-out infinite alternate;
+        transition: box-shadow 0.4s ease-in-out;
+    }
+
+
+    .title {
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: right;
+        color: $color-click;
+
+        span {
+            color: $color-click;
+        }
+    }
+
+    .description {
+        color: $color-click;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: right;
+        box-shadow: 0px 4px 4px 0px #00000040;
+    }
+
+    .highlight {
+        color: $color-click;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: right;
+        box-shadow: 0px 4px 4px 0px #00000040;
+
+
+        .emphasis {
+            color: $color-secondary; // purple tone from your theme
+        }
+    }
+
+    .note {
+        color: $color-click;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: right;
+        box-shadow: 0px 4px 4px 0px #00000040;
+    }
+
+    .cta-button {
+        background: linear-gradient(to right, $color-secondary 50%, $color-primary 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        color: $color-click;
+        width: 200px;
+        height: 58px;
+        margin: 30px 0 0 0px;
+        border: none;
+        border-radius: 10px;
+        gap: 10px;
+        padding: 15px 30px;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        box-shadow: 0 0 12px 2px $color-primary;
+        transition:
+            background-position 0.125s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.2s ease,
+            box-shadow 0.5s ease-in-out;
+        animation: pulseThemeGlow 2s ease-in-out infinite alternate;
+
+        &:hover {
+            background-position: left bottom;
+            transform: scale(1.08);
+        }
+    }
+
+}

@@ -1,0 +1,31 @@
+<section>
+  <div class="contact-promo">
+    <h2>Got a problem to solve?</h2>
+    <p>
+      Encourage people to contact you and describe what role you are interested in. Show that you will add value to
+      their projects through your work.
+    </p>
+    <p>
+      Need a Frontend developer? <strong>Contact me!</strong>
+    </p>
+  </div>
+  <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" id="form">
+    <input type="text" name="user_name" ngModel placeholder="Your name" required />
+    <input type="email" name="user_email" ngModel placeholder="Your email" required
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+    <textarea name="message" rows="5" ngModel placeholder="Your message" required></textarea>
+    <label class="consent">
+      <input type="checkbox" name="consent" ngModel required />
+      <span>
+        I've read the <a href="/privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my
+        data
+        as outlined.
+      </span>
+    </label>
+    <button type="submit" [disabled]="!contactForm.valid" class="cta-button">Send message :)</button>
+  </form>
+
+  <div *ngIf="isSent" class="confirmation-animation">
+    {{confirmationMessage}}
+  </div>
+</section>

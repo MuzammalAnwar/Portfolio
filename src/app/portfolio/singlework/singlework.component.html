@@ -1,0 +1,18 @@
+<div class="singlework">
+    <img [src]="image" alt="{{ title }} preview" />
+    <div class="right-side">
+        <h2>{{ title }}</h2>
+        <p class="techs">
+            <span *ngFor="let tech of technologies">{{ tech }}</span>
+        </p>
+        <p class="description">{{ description }}</p>
+        <div class="links">
+            <a [href]="liveLink" target="_blank">
+                <button class="cta-button">Live test</button>
+            </a>
+            <a [href]="githubLink" target="_blank">
+                <button class="cta-button2">Github</button>
+            </a>
+        </div>
+    </div>
+</div>

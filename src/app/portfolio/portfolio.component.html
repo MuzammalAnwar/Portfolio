@@ -1,0 +1,11 @@
+<section id="prj">
+    <app-singlework
+    *ngFor="let project of projects"
+    [title]="project.title"
+    [image]="project.image"
+    [technologies]="project.technologies"
+    [description]="project.description"
+    [liveLink]="project.liveLink"
+    [githubLink]="project.githubLink"
+    ></app-singlework>
+</section>

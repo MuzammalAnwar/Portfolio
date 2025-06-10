@@ -1,0 +1,233 @@
+@use '../styles.scss' as *;
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin: 30px 80px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 617px;
+    height: 508px;
+    gap: 32px;
+
+    input::placeholder,
+    textarea::placeholder {
+        color: rgba($color-click, 1); // or any custom color
+        font-style: italic;
+        transition: color 0.3s ease;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
+
+
+    input {
+        background: #0f1223;
+        border: 1px solid $color-primary;
+        font-size: 14px;
+        color: $color-click;
+        resize: none;
+        outline: none;
+        height: 50px;
+        border-radius: 10px;
+        border-width: 1px;
+        gap: 10px;
+        padding-top: 15px;
+        padding-right: 25px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+        width: 100%;
+
+        // Animate border color only
+        animation: pulseBorderColor 2.5s ease-in-out infinite alternate;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: $color-secondary;
+            box-shadow: 0 0 12px 2px $color-primary;
+            background: rgba(255, 255, 255, 0.02); // subtle contrast
+        }
+
+        &:hover {
+            border-color: lighten($color-primary, 10%);
+            background: rgba(255, 255, 255, 0.02); // subtle contrast
+            box-shadow: 0 0 6px 1px rgba($color-primary, 0.3);
+            box-shadow: 0 0 12px 2px $color-primary;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    textarea {
+        background: #0f1223;
+        border: 1px solid $color-primary;
+        border-radius: 6px;
+        padding-top: 15px;
+        padding-right: 25px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+        width: 100%;
+        font-size: 14px;
+        color: $color-click;
+        resize: vertical;
+        outline: none;
+        height: 100px;
+        max-height: 200px;
+
+        // Animate border color only
+        animation: pulseBorderColor 2.5s ease-in-out infinite alternate;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-color: $color-secondary;
+            box-shadow: 0 0 12px 2px $color-primary;
+            background: rgba(255, 255, 255, 0.02); // subtle contrast
+        }
+
+        &:hover {
+            border-color: lighten($color-primary, 10%);
+            background: rgba(255, 255, 255, 0.02); // subtle contrast
+            box-shadow: 0 0 6px 1px rgba($color-primary, 0.3);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 12px 2px $color-primary;
+        }
+    }
+
+
+    .consent {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #ffffff;
+        gap: 8px;
+
+        input[type='checkbox'] {
+            accent-color: $color-secondary;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        a {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+
+    .cta-button {
+        border: none;
+        border-radius: 8px;
+        background-color: gray;
+        color: white;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        transition: background 0.3s;
+        width: 253px;
+        height: 58px;
+        border-radius: 10px;
+        gap: 10px;
+        padding-top: 15px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+
+
+        &:enabled {
+            background: linear-gradient(to right, $color-secondary 50%, $color-primary 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            animation: pulseThemeGlow 2s ease-in-out infinite alternate;
+        }
+
+        &:hover:enabled {
+            background-position: left bottom;
+            transform: scale(1.05);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.confirmation-animation {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    padding: 12px 20px;
+    background-color: rgba($color-primary, 1);
+    border: 1px solid rgba($color-primary, 0.3);
+    border-radius: 8px;
+    color: $color-click;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    animation: slideInRight 0.4s ease-out, slideOutRight 0.4s ease-in 2.6s forwards;
+}
+
+.contact-promo {
+    color: $color-click;
+    width: 50%;
+
+    h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
+
+    strong {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes slideOutRight {
+    to {
+        opacity: 0;
+        transform: translateX(100%) translateY(0);
+        pointer-events: none;
+    }
+}
+
+
+@keyframes pulseBorderColor {
+    0% {
+        border-color: $color-primary;
+    }
+
+    100% {
+        border-color: $color-secondary;
+    }
+}

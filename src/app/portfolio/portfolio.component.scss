@@ -1,0 +1,25 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    app-singlework:nth-child(even) {
+        ::ng-deep .singlework {
+            flex-direction: row-reverse;
+
+            .right-side {
+                align-items: flex-end;
+            }
+
+            .links {
+                a {
+                    padding: 10px 0px 10px 18px !important;
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}

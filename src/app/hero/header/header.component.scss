@@ -1,0 +1,79 @@
+@use '../../src/styles.scss' as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    color: $color-click;
+    gap: 590px;
+    padding: 37px 100px;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    width: 524;
+    height: 35;
+    gap: 92px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 340;
+    height: 32;
+    gap: 29px;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    cursor: pointer;
+}
+
+.lang-btn {
+    padding: 5px 8px;
+    border-radius: 10px;
+    border-color: $color-primary;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: $color-click;
+    cursor: pointer;
+    transition: all 0.125s ease-in-out;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    width: 38;
+    height: 32;
+    // top: 20px;
+    // left: 20px;
+    border-width: 1px;
+    gap: 5px;
+
+    // === Hover State ===
+    &:hover {
+        background-color: $color-primary;
+        color: white;
+    }
+
+    // === Pressed (active click animation) ===
+    &:active {
+        background-color: $color-click;
+        color: black;
+    }
+
+    // === Active Selected ===
+    &.active {
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+        color: white;
+    }
+}
+
+.lang-switcher {
+    display: flex;
+    gap: 14px;
+}

@@ -1,0 +1,22 @@
+<section id="skillz">
+    <div class="skills">
+        <div *ngFor="let skill of skills" class="skill">
+            <img [src]="skill.icon" alt="">
+            <p>{{skill.name}}</p>
+        </div>
+    </div>
+
+    <div class="skills-section">
+        <h2 class="title">My <span>skills</span></h2>
+        <p class="description">
+            Show that you have used a variety of front-end technologies in your projects.
+        </p>
+        <p class="highlight">
+            Looking for <span class="emphasis">another skill</span>?
+        </p>
+        <p class="note">
+            Reveal enthusiasm for learning new technologies and frameworks.
+        </p>
+        <button (click)="scrollService.scrollToId('form')" class="cta-button">Get in touch</button>
+    </div>
+</section>
