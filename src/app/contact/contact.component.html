@@ -1,4 +1,4 @@
-<section>
+<section id="form">
   <img class="about-glow" src="../../assets/img/footer/Purple-shadow-Footer.svg" alt="glow" />
   <section class="contact-header">
     <div class="section-title">
@@ -12,7 +12,7 @@
       <p>{{'CONTACT.TEXT' | translate}}</p>
       <p [innerHTML]="'CONTACT.INVITE' | translate"></p>
     </div>
-    <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" id="form">
+    <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
       <input type="text" name="user_name" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.NAME' | translate}}" required />
       <input type="email" name="user_email" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.EMAIL' | translate}}" required
         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />

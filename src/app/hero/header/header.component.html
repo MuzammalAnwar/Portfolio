@@ -1,18 +1,44 @@
 <header class="text">
-    <div class="logo">Muzammal</div>
+    <img class="logo" (click)="scrollService.scrollToId('hero')"
+        src="../../../assets/icons/portfolio-icon2-removebg-preview.png" alt="">
+    <img class="burger-icon" [src]="isMenuOpen 
+          ? '../../../assets/icons/header/close-menu.svg' 
+          : '../../../assets/icons/header/burger-menu.svg'" alt="Menu" (click)="toggleMenu()" />
+
+    <!-- Desktop links -->
     <div class="header-links">
         <nav class="nav">
             <a (click)="scrollService.scrollToId('abtme')" class="text-hover border-hover">
                 {{'HEADER.ABOUT_ME' | translate}}
             </a>
             <a (click)="scrollService.scrollToId('skillz')" class="text-hover border-hover">Skills</a>
-            <a (click)="scrollService.scrollToId('prj')" class="text-hover border-hover">Portfolio</a>
+            <a (click)="scrollService.scrollToId('prj', -110)" class="text-hover border-hover">Portfolio</a>
         </nav>
         <div class="lang-switcher">
             <button class="lang-btn" (click)="switchLang('de')"
                 [class.active]="translate.currentLang === 'de'">DE</button>
             <button class="lang-btn" (click)="switchLang('en')"
                 [class.active]="translate.currentLang === 'en'">EN</button>
+        </div>
+    </div>
+
+    <!-- Slide-in mobile menu -->
+    <div class="slide-menu" [class.open]="isMenuOpen">
+        <div class="header-links-mobile">
+            <nav class="nav">
+                <a (click)="scrollService.scrollToId('abtme')" class="text-hover border-hover">
+                    {{ 'HEADER.ABOUT_ME' | translate }}
+                </a>
+                <a (click)="scrollService.scrollToId('skillz')" class="text-hover border-hover">Skills</a>
+                <a (click)="scrollService.scrollToId('prj', -110)" class="text-hover border-hover">Portfolio</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn" (click)="switchLang('de')"
+                    [class.active]="translate.currentLang === 'de'">DE</button>
+                <span>/</span>
+                <button class="lang-btn" (click)="switchLang('en')"
+                    [class.active]="translate.currentLang === 'en'">EN</button>
+            </div>
         </div>
     </div>
 </header>

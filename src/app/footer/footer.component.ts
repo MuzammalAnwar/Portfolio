@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ScrollService } from '../shared/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +10,6 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  constructor(public scrollService: ScrollService) {
+  }
 }

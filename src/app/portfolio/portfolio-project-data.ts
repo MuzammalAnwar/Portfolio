@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    image: '../../assets/img/hero/dummy-profile-img.png',
+    image: '../../assets/img/portfolio/join-photo-removebg-preview.png',
     title: 'Join',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     descriptionTranslateKey: "PORTFOLIO.PROJECTS.DESCRIPTION_JOIN",
@@ -8,7 +8,7 @@ export const PROJECTS = [
     githubLink: 'https://github.com/MuzammalAnwar/Join.git'
   },
   {
-    image: '../../assets/img/hero/dummy-profile-img.png',
+    image: '../../assets/img/portfolio/2d_game-removebg-preview.png',
     title: "Golem's Ember",
     technologies: ['HTML', 'CSS', 'JavaScript'],
     descriptionTranslateKey: "PORTFOLIO.PROJECTS.DESCRIPTION_2D_GAME",

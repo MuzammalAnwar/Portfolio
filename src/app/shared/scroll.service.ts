@@ -7,10 +7,15 @@ export class ScrollService {
 
   constructor() { }
 
-  scrollToId(id: string) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  scrollToId(id: string, offset: number = 0): void {
+    const element = document.getElementById(id);
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.scrollY + offset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
     }
   }
 }

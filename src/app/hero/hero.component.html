@@ -1,4 +1,4 @@
-<div class="hero-wrapper">
+<div class="hero-wrapper" id="hero">
     <app-header></app-header>
     <section>
         <div class="top-intro-section">
@@ -12,7 +12,7 @@
                         <h2 class="job-title">FULLSTACK DEVELOPER</h2>
                     </div>
                 </div>
-                <button (click)="scrollService.scrollToId('form')" class="cta-button">{{'HERO.BUTTON' |
+                <button (click)="scrollService.scrollToId('form', -110)" class="cta-button">{{'HERO.BUTTON' |
                     translate}}</button>
             </div>
         </div>

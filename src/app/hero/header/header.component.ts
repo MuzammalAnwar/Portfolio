@@ -10,6 +10,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  public isMenuOpen: boolean = false;
+
   constructor(public scrollService: ScrollService, public translate: TranslateService) {
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('en');
@@ -24,5 +26,10 @@ export class HeaderComponent {
 
   switchLang(lang: string) {
     this.translate.use(lang);
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+    document.body.classList.toggle('no-scroll', this.isMenuOpen);
   }
 }
