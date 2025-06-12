@@ -98,7 +98,7 @@ form {
         color: $color-click;
         resize: vertical;
         outline: none;
-        height: 100px;
+        min-height: 100px;
         max-height: 200px;
 
         animation: pulseBorderColor 2.5s ease-in-out infinite alternate;
@@ -294,6 +294,105 @@ span a {
             box-shadow: 0 0 12px 2px $color-primary;
             animation: pulseThemeGlow 2.5s ease-in-out infinite alternate;
             transition: box-shadow 0.4s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 1460px) {
+    form {
+        width: 38%;
+    }
+
+    .contact-promo {
+        width: 38%;
+    }
+
+    .contact-header {
+        .section-title {
+            .line-left {
+                max-width: 35%;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 960px) {
+    .contact-header {
+        .section-title {
+            .line-left {
+                max-width: 30%;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 800px) {
+    .contact-header {
+        .section-title {
+            h2 {
+                font-size: 45px;
+            }
+
+            .line-left {
+                max-width: 5%;
+            }
+        }
+    }
+
+    .contact-content {
+        .contact-promo {
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+
+    section {
+        margin: 15px 0 15px 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 77%;
+    }
+
+    .contact-promo {
+        width: 84%;
+    }
+
+    .contact-header {
+        margin-bottom: 0rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-promo {
+        h2 {
+            font-size: 28px;
+        }
+    }
+
+    form {
+        height: auto;
+
+        input {
+            height: 40px;
+        }
+
+        textarea {
+            min-height: 90px;
+            max-height: 180px;
         }
     }
 }

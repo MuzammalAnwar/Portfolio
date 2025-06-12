@@ -1,4 +1,14 @@
-<section id="skillz">
+<section>
+    <div class="skills-section-mobile">
+        <div class="text-mobile">
+            <p class="highlight" [innerHTML]="'MY_SKILLS.LOOKING' | translate"></p>
+            <p class="note">
+                {{'MY_SKILLS.FLEX' | translate}}
+            </p>
+        </div>
+        <button (click)="scrollService.scrollToId('form', -110)" class="cta-button"> {{'MY_SKILLS.BUTTON' |
+            translate}}</button>
+    </div>
     <img class="about-glow" src="../../assets/img/my-skills/Green-shadow-Skills-Portfolio.svg" alt="glow" />
     <div class="skills">
         <div *ngFor="let skill of skills" class="skill">
@@ -7,7 +17,7 @@
         </div>
     </div>
 
-    <div class="skills-section">
+    <div id="skillz" class="skills-section">
         <h2 class="title">{{'MY_SKILLS.TITLE' | translate}}</h2>
         <p class="description">
             {{'MY_SKILLS.INTRO' | translate}}

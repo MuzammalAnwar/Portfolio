@@ -11,7 +11,7 @@
             <a (click)="scrollService.scrollToId('abtme')" class="text-hover border-hover">
                 {{'HEADER.ABOUT_ME' | translate}}
             </a>
-            <a (click)="scrollService.scrollToId('skillz')" class="text-hover border-hover">Skills</a>
+            <a (click)="scrollService.scrollToId('skillz', -100)" class="text-hover border-hover">Skills</a>
             <a (click)="scrollService.scrollToId('prj', -110)" class="text-hover border-hover">Portfolio</a>
         </nav>
         <div class="lang-switcher">
@@ -26,17 +26,17 @@
     <div class="slide-menu" [class.open]="isMenuOpen">
         <div class="header-links-mobile">
             <nav class="nav">
-                <a (click)="scrollService.scrollToId('abtme')" class="text-hover border-hover">
+                <a (click)="scrollService.scrollToId('abtme'); toggleMenu()" class="text-hover border-hover">
                     {{ 'HEADER.ABOUT_ME' | translate }}
                 </a>
-                <a (click)="scrollService.scrollToId('skillz')" class="text-hover border-hover">Skills</a>
-                <a (click)="scrollService.scrollToId('prj', -110)" class="text-hover border-hover">Portfolio</a>
+                <a (click)="scrollService.scrollToId('skillz'); toggleMenu()" class="text-hover border-hover">Skills</a>
+                <a (click)="scrollService.scrollToId('prj', -110); toggleMenu()" class="text-hover border-hover">Portfolio</a>
             </nav>
             <div class="lang-switcher">
-                <button class="lang-btn" (click)="switchLang('de')"
+                <button class="lang-btn" (click)="switchLang('de'); toggleMenu()"
                     [class.active]="translate.currentLang === 'de'">DE</button>
                 <span>/</span>
-                <button class="lang-btn" (click)="switchLang('en')"
+                <button class="lang-btn" (click)="switchLang('en'); toggleMenu()"
                     [class.active]="translate.currentLang === 'en'">EN</button>
             </div>
         </div>

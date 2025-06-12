@@ -30,8 +30,19 @@ section {
                 }
             }
 
-            @media (max-width: 768px) {
-                flex-direction: column-reverse;
+            @media (max-width: 1070px) {
+                flex-direction: column;
+
+                .right-side {
+                    align-items: center;
+                    text-align: center;
+                }
+
+                .links {
+                    a {
+                        padding: 0px 0px 0px 0px !important;
+                    }
+                }
             }
         }
     }
@@ -94,5 +105,79 @@ section {
         line-height: 120%;
         letter-spacing: 0%;
         text-align: center;
+    }
+}
+
+@media (max-width: 1070px) {
+    section {
+        gap: 12px;
+    }
+
+    .portfolio-header {
+        margin-bottom: 0rem;
+    }
+
+    .portfolio-header {
+        .section-title {
+            .line-right {
+                max-width: 30%;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .portfolio-header {
+        .section-title {
+            h2 {
+                font-size: 59px;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        gap: 10px;
+    }
+
+    .portfolio-header {
+        .section-title {
+            h2 {
+                font-size: 45px;
+            }
+
+            .line-left {
+                max-width: 7%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .portfolio-header {
+        .subtitle {
+            margin: 0px 50px auto;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .portfolio-header {
+        .subtitle {
+            margin: 0px 10px auto;
+        }
+    }
+}
+
+
+@media (max-width: 550px) {
+    .portfolio-header {
+        .section-title {
+            .line-right {
+                max-width: 20%;
+            }
+        }
     }
 }

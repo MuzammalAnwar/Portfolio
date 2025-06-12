@@ -163,3 +163,60 @@
         box-shadow: 0 0 12px 4px rgba($color-secondary, 0.6);
     }
 }
+
+@media (max-width: 1220px) {
+    .singlework {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        padding: 0px 0;
+    }
+}
+
+@media (max-width: 1070px) {
+    .singlework {
+        flex-direction: column;
+
+        .right-side {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .singlework {
+        .right-side {
+            .description {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .singlework {
+        img {
+            width: 100%;
+        }
+
+        .cta-button {
+            width: auto;
+            font-size: 18px;
+        }
+
+        .cta-button2 {
+            width: 112px;
+            font-size: 18px;
+        }
+
+        .right-side {
+            .links {
+                a {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}

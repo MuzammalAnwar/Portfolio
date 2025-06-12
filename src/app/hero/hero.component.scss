@@ -272,5 +272,24 @@ section {
             box-shadow: 0 0 18px 4px $color-secondary;
         }
     }
+}
 
+@media (max-width: 1600px) {
+    section {
+        h1 {
+            font-size: 70px;
+        }
+
+        .job-title {
+            font-size: 48px;
+        }
+
+        .text-default {
+            font-size: 50px;
+        }
+
+        .text-german {
+            font-size: 33px !important;
+        }
+    }
 }
