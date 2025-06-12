@@ -293,3 +293,175 @@ section {
         }
     }
 }
+
+@media (max-width: 1400px) {
+    .profile-img {
+        width: 39%;
+        height: auto;
+    }
+
+    .hero-content {}
+
+    section {
+        .horizontal-text {
+            h1 {
+                font-size: 60px;
+            }
+
+            h2 {
+                font-size: 38px;
+            }
+        }
+
+        .text-default {
+            font-size: 42px;
+        }
+
+        .text-german {
+            font-size: 27px !important;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .profile-img {
+        width: 32%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1240px) {
+    .profile-img {
+        width: 72%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    section {
+        .top-intro-section {
+            flex-direction: column;
+        }
+
+        .hero-bottom-links {
+            align-items: anchor-center;
+            margin-bottom: 110px;
+        }
+
+        .scroll-down-text {
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    section {
+        .hero-bottom-links {
+            a {
+                display: none;
+            }
+        }
+
+        .scroll-down-text {
+            display: none;
+        }
+
+        .hero-bottom-links {
+            align-items: anchor-center;
+            margin-top: 110px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    section {
+        .horizontal-text {
+            h1 {
+                font-size: 45px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        .text-default {
+            font-size: 31px;
+        }
+
+        .text-german {
+            font-size: 19.5px !important;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    section {
+        .horizontal-text {
+            h1 {
+                font-size: 33px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+        }
+
+        .cta-button {
+            font-size: 18px;
+        }
+
+        .text-default {
+            font-size: 24px;
+        }
+
+        .text-german {
+            font-size: 15.5px !important;
+        }
+    }
+
+    .profile-img {
+        width: 69%;
+        height: auto;
+    }
+}
+
+@media (max-width: 390px) {
+    section {
+        .horizontal-text {
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 15px;
+            }
+        }
+
+        .text-default {
+            font-size: 17px;
+        }
+
+        .text-german {
+            font-size: 11.5px !important;
+        }
+
+        .hero-bottom-links {
+            .left-side {
+                gap: 13px;
+            }
+
+            .purple-line {
+                width: 74px;
+            }
+        }
+
+        .cta-button {
+            font-size: 18px;
+        }
+    }
+
+    .profile-img {
+        width: 69%;
+        height: auto;
+    }
+}
