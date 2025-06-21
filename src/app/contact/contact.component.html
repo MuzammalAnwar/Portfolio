@@ -13,21 +13,57 @@
       <p [innerHTML]="'CONTACT.INVITE' | translate"></p>
     </div>
     <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
-      <input type="text" name="user_name" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.NAME' | translate}}" required />
-      <input type="email" name="user_email" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.EMAIL' | translate}}" required
-        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
-      <textarea name="message" rows="5" ngModel placeholder="{{'CONTACT.PLACEHOLDERS.MESSAGE' | translate}}"
-        required></textarea>
+      <!-- NAME FIELD -->
+      <div class="input-wrapper"
+        [ngClass]="{'valid': name.valid && name.touched, 'invalid': name.invalid && name.touched}">
+        <input type="text" name="user_name" ngModel #name="ngModel"
+          placeholder="{{'CONTACT.PLACEHOLDERS.NAME' | translate}}" required />
+        <img *ngIf="name.touched"
+          [src]="name.valid ? '../../assets/icons/contact/green.svg' : '../../assets/icons/contact/error.svg'"
+          [alt]="name.valid ? 'valid' : 'error'" class="feedback-icon">
+        <div class="error-message" *ngIf="name.invalid && name.touched">{{'CONTACT.VALIDATION_TEXT.NAME' | translate}}</div>
+      </div>
+
+      <!-- EMAIL FIELD -->
+      <div class="input-wrapper"
+        [ngClass]="{'valid': email.valid && email.touched, 'invalid': email.invalid && email.touched}">
+        <input type="email" name="user_email" ngModel #email="ngModel"
+          placeholder="{{'CONTACT.PLACEHOLDERS.EMAIL' | translate}}" required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+        <img *ngIf="email.valid && email.touched" src="../../assets/icons/contact/green.svg" alt="valid"
+          class="feedback-icon">
+        <img *ngIf="email.invalid && email.touched" src="../../assets/icons/contact/error.svg" alt="error"
+          class="feedback-icon">
+        <div class="error-message" *ngIf="email.invalid && email.touched">{{'CONTACT.VALIDATION_TEXT.EMAIL' | translate}}</div>
+      </div>
+
+      <!-- MESSAGE FIELD -->
+      <div class="input-wrapper"
+        [ngClass]="{'valid': message.valid && message.touched, 'invalid': message.invalid && message.touched}">
+        <textarea name="message" rows="5" ngModel #message="ngModel"
+          placeholder="{{'CONTACT.PLACEHOLDERS.MESSAGE' | translate}}" required></textarea>
+
+        <img *ngIf="message.valid && message.touched" src="../../assets/icons/contact/green.svg" alt="valid"
+          class="feedback-icon">
+        <img *ngIf="message.invalid && message.touched" src="../../assets/icons/contact/error.svg" alt="error"
+          class="feedback-icon">
+
+        <div class="error-message" *ngIf="message.invalid && message.touched">{{'CONTACT.VALIDATION_TEXT.MESSAGE' | translate}}</div>
+      </div>
+
       <label class="consent">
         <input type="checkbox" name="consent" ngModel required />
         <span [innerHTML]="'CONTACT.CHECKBOX' | translate"></span>
       </label>
-      <button type="submit" [disabled]="!contactForm.valid" class="cta-button">{{'CONTACT.SEND_BUTTON' |
-        translate}}</button>
+      <button type="submit" [disabled]="!contactForm.valid" class="cta-button">
+        {{'CONTACT.SEND_BUTTON' | translate}}
+      </button>
     </form>
-
     <div *ngIf="isSent" class="confirmation-animation">
       {{confirmationMessage}}
     </div>
   </section>
+  <div class="go-up-arrow">
+    <img (click)="scrollService.scrollToId('hero')" src="../../assets/icons/contact/Go-up-button.svg" alt="" srcset="">
+  </div>
 </section>

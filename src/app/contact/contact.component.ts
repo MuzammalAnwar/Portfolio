@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import emailjs from 'emailjs-com';
+import { ScrollService } from '../shared/scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,6 +16,8 @@ export class ContactComponent {
   isSent: boolean = false;
   confirmationMessage: string = ''
 
+  constructor(public scrollService: ScrollService){}
+  
   sendEmail(form: NgForm) {
     emailjs.sendForm(
       'service_wuic8ya',

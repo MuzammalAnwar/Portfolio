@@ -19,6 +19,7 @@ section {
     display: flex;
     align-items: baseline;
     justify-content: space-evenly;
+    margin: 64px 0 64px 0;
 }
 
 h2 {
@@ -345,5 +346,20 @@ h2 {
         .cta-button {
             width: 260px;
         }
+    }
+}
+
+@media (max-width: 480px) {
+    .about-glow {
+        top: 137rem;
+        left: -42rem;
+        rotate: 10deg;
+    }
+}
+
+@media (max-width: 950px) {
+    .about-glow {
+        top: 129rem;
+        left: -42rem;
     }
 }

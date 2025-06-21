@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { SingleworkComponent } from './singlework/singlework.component';
 import { PROJECTS } from './portfolio-project-data';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',

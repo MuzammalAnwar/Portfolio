@@ -38,6 +38,11 @@
             "EMAIL": "Deine E-Mail",
             "MESSAGE": "Deine Nachricht"
         },
+        "VALIDATION_TEXT": {
+            "NAME": "Dein Name ist erforderlich",
+            "EMAIL": "Deine Email ist erforderlich",
+            "MESSAGE": "Deine Nachricht is leer"
+        },
         "CHECKBOX": "Ich habe die <a href='/privacy-policy' target='_blank'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
         "SEND_BUTTON": "Nachricht senden :)"
     },

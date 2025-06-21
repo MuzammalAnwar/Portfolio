@@ -1,16 +1,35 @@
 @use '../styles.scss' as *;
 
+body,
+html {
+    overflow-x: hidden;
+}
+
 :host {
     display: block;
     overflow-x: hidden !important;
 }
 
+.global-overflow-wrapper {
+    position: absolute;
+    top: 36rem;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
 .about-glow {
     position: absolute;
-    top: 50rem;
-    right: -25rem;
-    z-index: -1;
+    top: 0rem;
+    right: 0;
+    transform: translateX(61%);
+    z-index: 10;
     width: auto;
+    max-width: 100%;
     height: auto;
     pointer-events: none;
 }
@@ -21,7 +40,7 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 6rem;
-    // height: 100vh;
+    margin: 64px 0 0 0;
 
     .about-text {
         max-width: 650px;
